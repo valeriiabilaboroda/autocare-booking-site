@@ -1,0 +1,78 @@
+<!-- Сайт розроблено студенткою Білаборода Валерія, група ФІТ 4-1 -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoCare Booking — Прайс</title>
+  <meta name="description" content="Онлайн-бронювання автомийки та сервісних послуг: оберіть послугу, час і отримайте підтвердження." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Логотип" />
+        <div>
+          <div class="title">AutoCare Booking</div>
+          <div class="small">Онлайн‑запис на автомийку</div>
+        </div>
+      </div>
+      <nav aria-label="Навігація">
+        <a class="navlink" href="index.html">Головна</a>
+        <a class="navlink" href="services.html">Запис</a>
+        <a class="navlink" href="prices.html">Прайс</a>
+        <a class="navlink" href="about.html">Про нас</a>
+        <a class="navlink" href="contacts.html">Контакти</a>
+      </nav>
+    </div>
+
+    
+<section class="card">
+  <h1>Прайс і калькулятор вартості</h1>
+  <p class="lead">Оберіть послугу, додайте опції та кількість — підсумок порахується миттєво.</p>
+</section>
+
+<div class="grid">
+  <section class="card">
+    <h2 class="section-title">Розрахунок</h2>
+
+    <div class="form">
+      <div class="input">
+        <label for="serviceSel">Послуга</label>
+        <select id="serviceSel"></select>
+      </div>
+
+      <div class="input">
+        <label>Додаткові опції</label>
+        <div id="opts" class="form"></div>
+      </div>
+
+      <div class="input">
+        <label for="qty">Кількість</label>
+        <input id="qty" type="number" min="1" value="1" />
+      </div>
+
+      <div class="line">Підсумок: <b id="total">0 грн</b></div>
+      <div id="details" class="summary"></div>
+    </div>
+  </section>
+
+  <aside class="card">
+    <h2 class="section-title">Підказка</h2>
+    <div class="small">
+      Якщо ви не впевнені, яку послугу обрати — напишіть у «Контакти», і ми підкажемо варіант під вашу задачу.
+    </div>
+</aside>
+</div>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> • Білаборода Валерія, група ФІТ 4-1</div>
+      <div>AutoCare Booking • Швидкий онлайн‑запис</div>
+    </footer>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!-- Сайт розроблено студенткою Білаборода Валерія, група ФІТ 4-1 -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoCare Booking — Контакти</title>
+  <meta name="description" content="Онлайн-бронювання автомийки та сервісних послуг: оберіть послугу, час і отримайте підтвердження." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Логотип" />
+        <div>
+          <div class="title">AutoCare Booking</div>
+          <div class="small">Онлайн‑запис на автомийку</div>
+        </div>
+      </div>
+      <nav aria-label="Навігація">
+        <a class="navlink" href="index.html">Головна</a>
+        <a class="navlink" href="services.html">Запис</a>
+        <a class="navlink" href="prices.html">Прайс</a>
+        <a class="navlink" href="about.html">Про нас</a>
+        <a class="navlink" href="contacts.html">Контакти</a>
+      </nav>
+    </div>
+
+    
+<section class="card">
+  <h1>Контакти</h1>
+  <p class="lead">Є питання або потрібна порада щодо послуги? Напишіть — відповімо якнайшвидше.</p>
+</section>
+
+<div class="grid">
+  <section class="card">
+    <h2 class="section-title">Написати нам</h2>
+
+    <div class="form">
+      <div class="input">
+        <label for="name">Ім’я</label>
+        <input id="name" placeholder="Наприклад, Олена" />
+      </div>
+
+      <div class="input">
+        <label for="phone">Телефон</label>
+        <input id="phone" placeholder="+380..." />
+      </div>
+
+      <div class="input">
+        <label for="msg">Повідомлення</label>
+        <textarea id="msg" placeholder="Наприклад: хочу комплексну мийку завтра після 12:00"></textarea>
+      </div>
+
+      <div class="btnrow">
+        <button class="btn-primary" id="sendBtn" type="button">Надіслати</button>
+        <button class="btn-ghost" id="clearBtn" type="button">Очистити</button>
+      </div>
+
+      <div class="toast" id="contactToast" role="status" aria-live="polite"></div>
+      <div class="small" style="margin-top:10px;">* Повідомлення показується як підтвердження у інтерфейсі.</div>
+    </div>
+  </section>
+
+  <aside class="card">
+    <h2 class="section-title">Контакти</h2>
+    <div class="line">Телефон: <b>+380507888366</b></div>
+    <div class="line">Адреса: <b>м. Київ вул. Шолом-Алейхема 18</b></div>
+    <div class="line">Графік: <b>Пн‑Сб 09:00–18:00</b></div>
+</aside>
+</div>
+
+<script>
+  const sendBtn = document.getElementById('sendBtn');
+  const clearBtn = document.getElementById('clearBtn');
+  const toast = document.getElementById('contactToast');
+
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+  }
+  function clearToast(){
+    toast.textContent = '';
+    toast.classList.remove('show');
+  }
+
+  sendBtn.addEventListener('click', () => {
+    const name = (document.getElementById('name').value || '').trim();
+    const phone = (document.getElementById('phone').value || '').trim();
+    const msg = (document.getElementById('msg').value || '').trim();
+
+    if(!name || !phone || !msg){
+      showToast('⚠️ Заповніть, будь ласка, всі поля.');
+      return;
+    }
+    showToast(`✅ Дякуємо, ${name}! Ми отримали ваше повідомлення і зв’яжемось за номером ${phone}.`);
+  });
+
+  clearBtn.addEventListener('click', () => {
+    document.getElementById('name').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('msg').value = '';
+    clearToast();
+  });
+</script>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> • Білаборода Валерія, група ФІТ 4-1</div>
+      <div>AutoCare Booking • Швидкий онлайн‑запис</div>
+    </footer>
+  </div>
+
+  <script src="assets/main.js"></script>
+  
+</body>
+</html>

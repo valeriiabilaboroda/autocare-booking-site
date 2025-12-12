@@ -1,2 +1,17 @@
-# autocare-booking-site
-Car wash booking website with fixed time slots and a price calculator (HTML/CSS/JS, client-side only).
+# AutoCare Booking (навчальний сайт)
+
+**Автор:** Білаборода Валерія, група ФІТ 4-1
+
+Сайт імітує реальний сервіс онлайн‑запису на автомийку/майстерню: вибір послуги, слоту часу та калькулятор вартості.
+
+## Сторінки
+- `index.html` — головна
+- `services.html` — онлайн‑запис
+- `prices.html` — прайс + калькулятор
+- `about.html` — інформація про бізнес
+- `contacts.html` — форма звернення (демо‑підтвердження)
+
+## Публікація на GitHub Pages
+1) Завантаж файли в репозиторій.  
+2) GitHub → Settings → Pages → Deploy from a branch → `main` + `/ (root)`.
+

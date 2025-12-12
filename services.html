@@ -1,0 +1,71 @@
+<!-- Сайт розроблено студенткою Білаборода Валерія, група ФІТ 4-1 -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoCare Booking — Запис</title>
+  <meta name="description" content="Онлайн-бронювання автомийки та сервісних послуг: оберіть послугу, час і отримайте підтвердження." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Логотип" />
+        <div>
+          <div class="title">AutoCare Booking</div>
+          <div class="small">Онлайн‑запис на автомийку</div>
+        </div>
+      </div>
+      <nav aria-label="Навігація">
+        <a class="navlink" href="index.html">Головна</a>
+        <a class="navlink" href="services.html">Запис</a>
+        <a class="navlink" href="prices.html">Прайс</a>
+        <a class="navlink" href="about.html">Про нас</a>
+        <a class="navlink" href="contacts.html">Контакти</a>
+      </nav>
+    </div>
+
+    
+<div class="grid">
+  <section class="card" aria-label="Послуги">
+    <h2 class="section-title">Оберіть послугу</h2>
+    <div class="services" id="services"></div>
+    <div class="small" style="margin-top:10px;">
+      Перелік послуг налаштований під автомийку — за потреби змінюйте ціни/час.
+    </div>
+  </section>
+
+  <aside class="card" aria-label="Час і підтвердження">
+    <h2 class="section-title">Оберіть час</h2>
+    <div class="slots" id="slots"></div>
+
+    <h2 class="section-title" style="margin-top:14px;">Підтвердження</h2>
+    <div class="line" id="pickedService">Послуга: <b>не обрано</b></div>
+    <div class="line" id="pickedTime">Час: <b>не обрано</b></div>
+
+    <div class="btnrow">
+      <button class="btn-primary" id="confirmBtn" disabled>Підтвердити бронювання</button>
+      <button class="btn-ghost" id="resetBtn" type="button">Скинути</button>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="small" style="margin-top:10px;">
+      Після підтвердження ви побачите повідомлення з обраною послугою та часом.
+    </div>
+  </aside>
+</div>
+
+
+    <footer class="footer">
+      <div>© <span id="year"></span> • Білаборода Валерія, група ФІТ 4-1</div>
+      <div>AutoCare Booking • Швидкий онлайн‑запис</div>
+    </footer>
+  </div>
+
+  <script src="assets/main.js"></script>
+  <script src="assets/booking.js"></script>
+</body>
+</html>
